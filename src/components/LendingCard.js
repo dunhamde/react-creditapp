@@ -9,7 +9,8 @@ import { getCreditViewStatus } from '../reducers/reducer_reqs'
 
 const AppContainer = styled.div`
   max-width: 640px;
-  height: 480px;
+  /* height: 520px; */
+  /* height: auto; */
   background-color: white;
   margin: 0 auto;
   display:grid;
@@ -27,9 +28,9 @@ const LendingViewContainer = styled.div`
 `;
 
 const LendingCardContainer = styled.div`
-  margin: 20px;
+  margin: 25px;
   display: grid;
-  grid-template-rows: 1fr 5fr;
+  grid-template-rows: 75px; 5fr;
 `;
 
 class LendingCard extends Component {

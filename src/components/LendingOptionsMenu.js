@@ -7,6 +7,9 @@ import CreditCardPng from './card.png';
 import BankPng from './bank3.png';
 
 const LendingButton = styled.div`
+    span {
+        margin-top: 5px;
+    }
     display:flex;
     cursor: pointer;
     flex: 1;
@@ -17,8 +20,8 @@ const LendingButton = styled.div`
     border-top-right-radius: ${props => props.right ? "4px" : 0};
     border-bottom-left-radius: ${props => props.left ? "4px" : 0};
     border-bottom-right-radius: ${props => props.right ? "4px" : 0};
-    border: 1px solid black;
-    background-color: ${props => (props.status && props.left) || (!props.status && props.right) ? "lightgray" : "white"}
+    border: 1px solid #D0D2D6;
+    background-color: ${props => (props.status && props.left) || (!props.status && props.right) ? "#D0D2D6" : "white"};
 `;
 
 const LendingOptionsContainer = styled.div`
@@ -29,11 +32,11 @@ class LendingOptionsMenu extends Component {
         return (
             <LendingOptionsContainer>
                 <LendingButton onClick={this.props.showCreditHealthView} left status={this.props.creditHealth}>
-                    <img height="32" width="32" src={CreditCardPng}/>
+                    <img height="32" width="32" src={CreditCardPng} alt="CreditIcon"/>
                     <span>Credit Card</span>
                 </LendingButton>
                 <LendingButton onClick={this.props.showTermLoanView} right status={this.props.creditHealth}>
-                    <img height="32" width="32" src={BankPng} />
+                    <img height="32" width="32" src={BankPng} alt="BankIcon"/>
                     <span>Term Loan</span>
                 </LendingButton>
             </LendingOptionsContainer>
@@ -43,8 +46,8 @@ class LendingOptionsMenu extends Component {
 
 function mapStateToProps(state) {
     return {
-      creditHealth: getCreditViewStatus(state),
+        creditHealth: getCreditViewStatus(state),
     };
-  }
+}
 
 export default connect(mapStateToProps, { showCreditHealthView, showTermLoanView })(LendingOptionsMenu);
