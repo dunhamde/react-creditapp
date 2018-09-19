@@ -4,6 +4,8 @@ import LendingOptionsMenu from './LendingOptionsMenu';
 import CreditHealthReport from "./CreditHealthReport";
 import TermLoanForm from "./TermLoanForm";
 import { connect } from 'react-redux';
+import { showCreditHealthView } from '../actions/lending'
+import { getCreditViewStatus } from '../reducers/reducer_reqs'
 
 const AppContainer = styled.div`
   max-width: 640px;
@@ -31,22 +33,9 @@ const LendingCardContainer = styled.div`
 `;
 
 class LendingCard extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-			showCreditHealth: true
-		};
-  }
 
-  showCreditHealth = () => {
-    this.setState({
-      showCreditHealth: true
-    })
-  }
-  hideCreditHealth = () => {
-    this.setState({
-      showCreditHealth: false
-    })
+  componentDidMount() {
+    this.props.showCreditHealthView();
   }
 
   render() {
@@ -73,4 +62,4 @@ function mapStateToProps(state) {
   };
 }
 
-export default connect(mapStateToProps)(LendingCard);
+export default connect(mapStateToProps, { showCreditHealthView })(LendingCard);
