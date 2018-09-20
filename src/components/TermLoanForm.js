@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import HandshakePng from "./handshake.png";
-import AddButtonPng from "./add.png";
-import styled from "styled-components";
+import HandshakePng from './assets/handshake.png';
+import AddButtonPng from './assets/add.png';
+import styled from 'styled-components';
 
 const TermLoanFormContainer = styled.div`
     border: 1px solid #D0D2D6;
@@ -18,9 +18,6 @@ const TermLoanFormContainer = styled.div`
         padding: 0;
         margin: 15px;
     }
-    img:nth-child(2) {
-        cursor: pointer;
-    }
 `;
 
 class TermLoanForm extends Component {
@@ -29,7 +26,7 @@ class TermLoanForm extends Component {
             <TermLoanFormContainer>
                 <div>
                     <img height="100" width="100" src={HandshakePng} alt="SmallBizIcon"/>
-                    <h1>Add your business</h1>
+                    <h2>Add your business</h2>
                     <p>For term loan options, add your business</p>
                     <img height="50" width="50" src={AddButtonPng} alt="AddButtonIcon"/>
                 </div>

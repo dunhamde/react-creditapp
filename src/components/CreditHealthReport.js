@@ -4,7 +4,7 @@ import { getLendingRequirements } from "../reducers/reducer_reqs";
 import { connect } from 'react-redux';
 
 
-const CreditHealthStatus = styled.div`
+export const CreditHealthStatus = styled.div`
     background-color: #DCE8E3;
     border-radius: 4px;
     div {
@@ -18,7 +18,7 @@ const CreditHealthStatus = styled.div`
     }
 `;
 
-const CreditRequirementsList = styled.ul`
+export const CreditRequirementsList = styled.ul`
     margin-top: 10px;
     list-style: none;
     padding: 0;
@@ -51,7 +51,7 @@ const jsonReqs = [
   ];
 
 
-class CreditHealthReport extends Component {
+export class CreditHealthReport extends Component {
     renderRequirementsList() {
         return jsonReqs.map(req => {
             return (

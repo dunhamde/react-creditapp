@@ -3,10 +3,10 @@ import styled from 'styled-components';
 import { connect } from 'react-redux';
 import { showCreditHealthView, showTermLoanView } from '../actions/lending';
 import { getCreditViewStatus } from '../reducers/reducer_reqs';
-import CreditCardPng from './card.png';
-import BankPng from './bank3.png';
+import CreditCardPng from './assets/card.png';
+import BankPng from './assets/bank3.png';
 
-const LendingButton = styled.div`
+export const LendingButton = styled.div`
     span {
         margin-top: 5px;
     }
@@ -26,8 +26,9 @@ const LendingButton = styled.div`
 
 const LendingOptionsContainer = styled.div`
     display: flex;
-`
-class LendingOptionsMenu extends Component {
+`;
+
+export class LendingOptionsMenu extends Component {
     render() {
         return (
             <LendingOptionsContainer>

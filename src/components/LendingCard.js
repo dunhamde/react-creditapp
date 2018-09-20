@@ -1,16 +1,14 @@
-import React, { Component } from "react";
-import styled from "styled-components";
+import React, { Component } from 'react';
+import styled from 'styled-components';
 import LendingOptionsMenu from './LendingOptionsMenu';
-import CreditHealthReport from "./CreditHealthReport";
-import TermLoanForm from "./TermLoanForm";
+import CreditHealthReport from './CreditHealthReport';
+import TermLoanForm from './TermLoanForm';
 import { connect } from 'react-redux';
 import { showCreditHealthView } from '../actions/lending'
 import { getCreditViewStatus } from '../reducers/reducer_reqs'
 
 const AppContainer = styled.div`
   max-width: 640px;
-  /* height: 520px; */
-  /* height: auto; */
   background-color: white;
   margin: 0 auto;
   display:grid;
@@ -33,23 +31,19 @@ const LendingCardContainer = styled.div`
   grid-template-rows: 75px; 5fr;
 `;
 
-class LendingCard extends Component {
+export class LendingCard extends Component {
 
   componentDidMount() {
     this.props.showCreditHealthView();
   }
 
-  render() {
-    const showCreditHealth = this.props.creditHealth;
-    let currentLendingView;
-    currentLendingView = showCreditHealth ? <CreditHealthReport /> : <TermLoanForm />;
-    
+  render() {    
     return (
       <AppContainer>
         <LendingCardContainer>
           <LendingOptionsMenu />
           <LendingViewContainer>
-            {currentLendingView}
+            {this.props.creditHealth ? <CreditHealthReport /> : <TermLoanForm />}
           </LendingViewContainer>
         </LendingCardContainer>
       </AppContainer>
