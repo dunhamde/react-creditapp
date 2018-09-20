@@ -5,12 +5,14 @@ import { connect } from 'react-redux';
 
 export const CreditHealthStatus = styled.div`
     background-color: #DCE8E3;
+    font-family: 'Old Standard TT', serif;
     border-radius: 4px;
     div {
         padding: 15px;
     }
     p {
         margin: 0;
+        font-family: sans-serif;
     }
     h3 {
         margin: 0 0 20px 0;

@@ -10,6 +10,7 @@ export const LendingButton = styled.div`
     span {
         margin-top: 5px;
     }
+    font-family: 'Noto Serif', serif;
     display:flex;
     cursor: pointer;
     flex: 1;
