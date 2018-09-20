@@ -6,7 +6,6 @@ import styled from 'styled-components';
 const TermLoanFormContainer = styled.div`
     border: 1px solid #D0D2D6;
     border-radius: 4px;
-
     div {
         display: flex;
         flex-direction: column;

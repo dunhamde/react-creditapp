@@ -4,7 +4,7 @@ import LendingOptionsMenu from './LendingOptionsMenu';
 import CreditHealthReport from './CreditHealthReport';
 import TermLoanForm from './TermLoanForm';
 import { connect } from 'react-redux';
-import { showCreditHealthView } from '../actions/lending'
+import { showCreditHealthView, initCreditRequirements } from '../actions/lending'
 import { getCreditViewStatus } from '../reducers/reducer_reqs'
 
 const AppContainer = styled.div`

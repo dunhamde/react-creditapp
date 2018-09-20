@@ -1,10 +1,10 @@
-import _ from "lodash";
-import { createSelector } from "reselect";
+import _ from 'lodash';
+import { createSelector } from 'reselect';
 import {
   FETCH_CREDIT_REQS,
   SHOW_CREDIT_HEALTH,
   SHOW_TERM_LOAN
-} from "../actions/lending";
+} from '../actions/lending';
 
 export default function(state = {}, action) {
   switch (action.type) {

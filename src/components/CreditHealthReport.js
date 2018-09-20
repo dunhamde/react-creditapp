@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { getLendingRequirements } from "../reducers/reducer_reqs";
 import { connect } from 'react-redux';
 
-
 export const CreditHealthStatus = styled.div`
     background-color: #DCE8E3;
     border-radius: 4px;
@@ -49,7 +48,6 @@ const jsonReqs = [
     {requirement: "Personal credit utilization", value: "32%", id: "5"},
     {requirement: "Personal credit limit", value: "$49,300", id: "6"}
   ];
-
 
 export class CreditHealthReport extends Component {
     renderRequirementsList() {
